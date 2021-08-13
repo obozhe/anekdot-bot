@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const cron = require('node-cron');
 
-const config = require('./config.json');
+const dotenv = require('dotenv');
+dotenv.config();
 
-mongoose.connect(config.MONGO_URL, {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

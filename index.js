@@ -3,10 +3,9 @@ const { Telegraf, Markup } = require('telegraf');
 const ContentTypes = require('./content-types');
 const splitArrayToChunks = require('./heplers/array-to-chunk');
 const getContent = require('./heplers/request-content-api');
-const config = require('./config.json');
 const { createNewChat } = require('./db.controller');
 
-const bot = new Telegraf(config.BOT_API);
+const bot = new Telegraf(process.env.BOT_API);
 const sections = splitArrayToChunks(Object.keys(ContentTypes));
 
 bot.start(async (ctx) => {
