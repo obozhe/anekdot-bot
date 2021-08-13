@@ -1,1 +1,1 @@
-# anetdot-bot
+# anektdot-bot

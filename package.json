@@ -1,0 +1,29 @@
+{
+  "name": "anektdot-bot",
+  "version": "1.0.0",
+  "description": "Sends you a little bit of laugh every day",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obozhe/anekdot-bot.git"
+  },
+  "author": "obozhe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/obozhe/anekdot-bot.git/issues"
+  },
+  "homepage": "https://github.com/obozhe/anekdot-bot.git#readme",
+  "dependencies": {
+    "fast-xml-parser": "^3.19.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.13.7",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^2.6.1",
+    "telegraf": "^4.4.1"
+  }
+}
