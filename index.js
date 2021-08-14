@@ -22,7 +22,10 @@ bot.help((ctx) => ctx.reply('Боже я думаю ты сам разбереш
 Object.keys(ContentTypes).forEach((contentType) => {
   bot.hears(contentType, (ctx) => {
     getContent(ContentTypes[contentType])
-      .then((content) => ctx.reply(content))
+      .then((content) => {
+        const reply = content || 'Похоже пришел пустой ответ на запрос... Попробуй еще раз';
+        ctx.reply(reply);
+      })
       .catch(console.error);
   });
 });
