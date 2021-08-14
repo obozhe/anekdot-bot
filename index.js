@@ -25,7 +25,7 @@ app.listen(port, '0.0.0.0', function () {
 
   Object.keys(ContentTypes).forEach((contentType) => {
     bot.hears(contentType, (ctx) => {
-      const  str = `sdfsdfasdfsdfsafdsdfasfasdfas
+      const str = `sdfsdfasdfsdfsafdsdfasfasdfas
 fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
 dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
 fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
@@ -103,7 +103,7 @@ dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
 fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
 dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
 fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
-dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]`const  str = `sdfsdfasdfsdfsafdsdfasfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
 fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
 dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
 fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
@@ -181,7 +181,7 @@ dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
 fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
 dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
 fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
-dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]`
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]`;
       // getContent(ContentTypes[contentType])
       //   .then((content) => {
       //     if (content && content.length > 4096) {
@@ -195,7 +195,7 @@ dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]`
       //     }
       //   })
       //   .catch(console.error);
-      ctx.reply(str)
+      ctx.reply(str);
     });
   });
 
