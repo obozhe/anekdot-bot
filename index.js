@@ -1,51 +1,46 @@
+require('dotenv').config();
 const { Telegraf, Markup } = require('telegraf');
-const express = require('express');
-const app = express();
+const cron = require('node-cron');
+
+const bot = new Telegraf(process.env.BOT_API);
 
 const ContentTypes = require('./content-types');
 const splitArrayToChunks = require('./heplers/array-to-chunk');
 const getContent = require('./heplers/request-content-api');
-// const { createNewChat } = require('./db.controller');
+const botReply = require('./heplers/handle-bot-send-message.helper')(bot);
+const { createNewChat, getChats } = require('./db.controller');
 
-const port = process.env.PORT || 3000;
-app.listen(port, '0.0.0.0', function () {
-  const bot = new Telegraf(process.env.BOT_API);
-  const sections = splitArrayToChunks(Object.keys(ContentTypes));
+const sections = splitArrayToChunks(Object.keys(ContentTypes));
 
-  bot.start((ctx) => {
-    ctx.reply(
-      'Жми че ты там хочешь и запомни че делать потому что эта инфа больше не появится',
-      Markup.keyboard(sections).resize()
-    );
+bot.start((ctx) => {
+  ctx.reply(
+    'Выбери из меню категорию и получи случайный анекдот, тост и многое другое.',
+    Markup.keyboard(sections).resize()
+  );
 
-    // createNewChat(ctx.message.chat.id);
-  });
-
-  bot.help((ctx) => ctx.reply('Боже я думаю ты сам разберешься че тут делать))))'));
-
-  Object.keys(ContentTypes).forEach((contentType) => {
-    bot.hears(contentType, (ctx) => {
-      getContent(ContentTypes[contentType])
-        .then((content) => {
-          handleMessageSend(ctx, content);
-        })
-        .catch(console.error);
-    });
-  });
-
-  bot.on('text', (ctx) => ctx.reply('Не понял 🤔\nНадо кнопки снизу жать иначе никак'));
-
-  bot.launch();
+  createNewChat(ctx.message.chat.id);
 });
 
-function handleMessageSend(ctx, content) {
-  if (content && content.length > 4096) {
-    const reply = content.match(/(.|[\r\n]){1,4096}/g);
-    reply.forEach((chunk) => {
-      ctx.reply(chunk);
-    });
-  } else {
-    const reply = content || 'Похоже пришел пустой ответ на запрос... Попробуй еще раз';
-    ctx.reply(reply);
-  }
-}
+Object.keys(ContentTypes).forEach((contentType) => {
+  bot.hears(contentType, (ctx) => {
+    getContent(ContentTypes[contentType])
+      .then((content) => {
+        botReply(ctx.message.chat.id, content);
+      })
+      .catch(console.error);
+  });
+});
+
+bot.on('text', (ctx) => ctx.reply('Не понял 🤔'));
+
+bot.launch();
+
+cron.schedule('00 05 * * *', async () => {
+  const chatIds = (await getChats()).map((item) => item.chat_id);
+  const randomJoke = await getContent(1);
+  const goodMorning = 'Доброе утро 🌞 \nВот тебе случаййный анекдот для поднятия настроения!';
+  chatIds.forEach((chatId) => {
+    bot.telegram.sendMessage(chatId, goodMorning);
+    botReply(chatId, randomJoke);
+  });
+});
