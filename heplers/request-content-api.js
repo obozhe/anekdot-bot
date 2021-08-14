@@ -8,5 +8,6 @@ module.exports = function (contentCode) {
       const decoder = new TextDecoder('windows-1251');
       return decoder.decode(buffer);
     })
-    .then((decodedXml) => XMLParser.parse(decodedXml).root.content);
+    .then((decodedXml) => XMLParser.parse(decodedXml).root.content)
+    .catch(console.error);
 };

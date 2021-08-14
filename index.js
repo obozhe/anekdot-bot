@@ -8,7 +8,7 @@ const getContent = require('./heplers/request-content-api');
 const bot = new Telegraf(process.env.BOT_API);
 const sections = splitArrayToChunks(Object.keys(ContentTypes));
 
-bot.start(async (ctx) => {
+bot.start((ctx) => {
   ctx.reply(
     'Жми че ты там хочешь и запомни че делать потому что эта инфа больше не появится',
     Markup.keyboard(sections).resize()
@@ -20,9 +20,10 @@ bot.start(async (ctx) => {
 bot.help((ctx) => ctx.reply('Боже я думаю ты сам разберешься че тут делать))))'));
 
 Object.keys(ContentTypes).forEach((contentType) => {
-  bot.hears(contentType, async (ctx) => {
-    const content = await getContent(ContentTypes[contentType]);
-    ctx.reply(content);
+  bot.hears(contentType, (ctx) => {
+    getContent(ContentTypes[contentType])
+      .then((content) => ctx.reply(content))
+      .catch(console.error);
   });
 });
 
