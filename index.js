@@ -25,12 +25,177 @@ app.listen(port, '0.0.0.0', function () {
 
   Object.keys(ContentTypes).forEach((contentType) => {
     bot.hears(contentType, (ctx) => {
-      getContent(ContentTypes[contentType])
-        .then((content) => {
-          const reply = content || 'Похоже пришел пустой ответ на запрос... Попробуй еще раз';
-          ctx.reply(reply);
-        })
-        .catch(console.error);
+      const  str = `sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]`const  str = `sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]sdfsdfasdfsdfsafdsdfasfasdfas
+fasdfasdfasdfasdfklamsdlfkmsa;dfma;sdfmsadfasdfas
+dfasdfasdfasd'.;svmhowe8f23p[23f;kfsdv adv]`
+      // getContent(ContentTypes[contentType])
+      //   .then((content) => {
+      //     if (content && content.length > 4096) {
+      //       const reply = content.match(/(.|[\r\n]){1,4096}/g);
+      //       reply.forEach((chunk) => {
+      //         ctx.reply(chunk);
+      //       });
+      //     } else {
+      //       const reply = content || 'Похоже пришел пустой ответ на запрос... Попробуй еще раз';
+      //       ctx.reply(reply);
+      //     }
+      //   })
+      //   .catch(console.error);
+      ctx.reply(str)
     });
   });
 
